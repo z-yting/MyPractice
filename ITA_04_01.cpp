@@ -16,6 +16,10 @@ int max(int a,int b)
 // low <= i <= mid < j < high
 int findMaxCrossingSubarray(const int* adata,int low, int high, Crange& range)
 {
+    if(low == 0 && high == 4)
+    {
+
+    }
 
     int ileftSum = 0;
     int irightSum = 0;
@@ -54,7 +58,7 @@ int findMaxCrossingSubarray(const int* adata,int low, int high, Crange& range)
         if(isum > irightSum)
         {
            irightSum = isum;
-            range.imaxRight = i;
+            range.imaxRight = i +1;
         }
     }
     if(flag)
